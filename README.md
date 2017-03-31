@@ -31,15 +31,10 @@ I won't waffle on more, you get the idea.
 
 # setup
 
-After cloning the repo, you'll probably have to install some npm modules to get the project to compile.
+After cloning the repo, you'll have to install the npm packages.  To do this, type ```npm i``` while in the correct repos directory in the terminal.
 
-    $ sudo npm i -S react
-	$ sudo npm i -S react-dom
-	$ sudo npm i -D babel-core babel-loader babel-preset-react
-	$ sudo npm i -D webpack webpack-dev-server html-webpack-plugin
+Once you have done this, you can begin developing by typing ```npm start```.  This will start webpack dev server which will watch for changes you make and serve an up to date version of the app.
 
-If you've set up your npm permissions correctly you won't have to sudo, but I'm pretty sloppy so that's on my to-do list. 
+If you wish to build a static version of the website (for test deployment), type ```npm run build``` in the terminal.
 
-BTW, I set up my react environment using the [codecademy](https://www.codecademy.com/articles/react-setup-) instructions. That link takes you to the condensed list where I got the above commands, but you can backtract the url from there for the whole setup process if you like.
-
-It's a MASSIVE HASSLE in my view.
+Note, the original starter kit for this repository was sourced from [codecademy](https://www.codecademy.com/articles/react-setup-).  You can follow these instructions to set up your own blank project or use the popular CLI, create-react-app.
