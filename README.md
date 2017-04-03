@@ -38,3 +38,17 @@ Once you have done this, you can begin developing by typing ```npm start```.  Th
 If you wish to build a static version of the website (for test deployment), type ```npm run build``` in the terminal.
 
 Note, the original starter kit for this repository was sourced from [codecademy](https://www.codecademy.com/articles/react-setup-).  You can follow these instructions to set up your own blank project or use the popular CLI, create-react-app.
+
+# testing
+
+This repo uses Jest + Enzyme as its unit testing suite.  This choice was made because these testing tools are powerful, easy to use, well documented and popular (meaning lots of community support and tutorials).  However, anything you learn using these tools should be easily transferable to other testing frameworks with minor changes.
+
+To run tests, find the root directory of this repo in your terminal application.  If this is your first time testing, type ```npm i``` to ensure you have all required dependencies installed.  You can then use the following commands to run different types of test:
+
+* ```npm run test``` - this runs a one-off test of the whole testing suite;
+* ```npm run test-watch``` - this runs the testing suite in watch mode.  It will watch for saves you make to components that are being tested and re-run the tests relating to those components immediately after saving.  This is useful to have running in the background if you are using TDD for immediate feedback on your changes.
+* ```npm run test-coverage``` - this produces a coverage report.  It will look at your tests and calculate how much of your codebase is covered by the tests you have written.  It will also give you useful feedback on the lines of code that aren't touched by your tests (so you can fill these gaps).
+
+To create a test, simply place a file next to the component you are testing with the following name: ```<component name>.spec.js```.  Jest will automatically find all files following this naming convention.  
+
+An example (incomplete) test has been provided at ```app/components/App.spec.js```.  Over time, we aim to build a testing utility library so that common tests and tasks within tests do not have to be tpyed out every time a new test is created.
